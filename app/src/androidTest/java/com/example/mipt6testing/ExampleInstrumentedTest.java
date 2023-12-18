@@ -22,11 +22,9 @@ public class ExampleInstrumentedTest {
 
     @Test
     public void ensureTextChangesWork() {
-        // Type text and then press the button.
         onView(withId(R.id.editTextUserInput)).perform(typeText("Test"));
         onView(withId(R.id.buttonUpdate)).perform(click());
 
-        // Check that the TextView text was updated.
         onView(withId(R.id.textViewDisplay)).check(matches(withText("Test")));
     }
 }
